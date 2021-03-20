@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="a">Feet to Meter</label>
+<input type="number" id="a" oninput="feettoMeter(this.value)"><br>
+<p>Meter = <span id="m"></span> </p><br>
+<label for="b">Meter to Feet</label>
+<input type="number" id="b" oninput="metertoFeet(this.value)"><br>
+<p>Feet = <span id="f"></span> </p><br>
+<script>
+
+    function feettoMeter(feet) {
+        var meter = 0.305 * feet;
+        document.getElementById("m").innerHTML = meter;
+    }
+    function metertoFeet(meter) {
+        var feet = 3.279 * meter;
+        document.getElementById("f").innerHTML = feet;
+    }
+
+    for (var i = 0; i < a.length; i++){
+        if (a == vn[i] ){
+            b = eng[i];
+            break;
+        } else if (a == eng[i] ){
+            b = vn[i];
+            break;
+        }
+    }
+    if (a !== vn[i] && a !== eng[i]){
+        alert("không tìm thấy")
+    }
+    document.write(b)
+</script>
+</body>
+</html>

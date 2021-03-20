@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="text1" placeholder="Tính độ dài chuỗi">
+<button type="button" onclick="length()">Click</button>
+
+<input type="text" id="text2" placeholder="Tính trung bình cộng">
+<button type="button" onclick="average()">Click</button>
+
+<P>Result: <span id="result"></span></P>
+<script>
+
+    function length(a) {
+        a = document.getElementById("text1").value
+        document.getElementById("result").innerHTML = a.length
+    }
+
+
+    function average(tbc){
+        tbc = document.getElementById("text2").value;
+        var b = tbc.split('');
+        alert(b)
+        var sum = b.reduce(function (total, number) {
+            return total + number;
+        }, 0);
+        alert(sum)
+        // total = [];
+        // count = 0;
+        // for (var i = 0; i < b.length; i++){
+        //     total.push(b[i])
+        //     sum = total.join()
+        //     alert(sum)
+        //     count++;
+        // }
+        document.getElementById(result).innerHTML = total/count
+    }
+</script>
+</body>
+</html>

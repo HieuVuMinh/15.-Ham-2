@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="a">Enter the Star or The condtellation</label>
+<input type="text" id="a" onchange="search(this.value)">
+
+<p>Result: <span id="b"></span></p>
+<script>
+    var theStar = ["polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"]
+    var consteLlation = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"]
+    var theConsteLlation = []
+
+    function search(star) {
+        for (var i = 0; i < theStar.length; i++) {
+            if (star == theStar[i]) {
+                theConsteLlation = consteLlation[i];
+                break;
+            }
+            if (star == consteLlation[i]) {
+                theConsteLlation = theStar[i];
+                break;
+            }
+        }
+        if (star !== theStar[i] && star !== consteLlation[i]) {
+            alert("Not found")
+        }
+        document.getElementById("b").innerHTML = theConsteLlation
+    }
+
+</script>
+</body>
+</html>

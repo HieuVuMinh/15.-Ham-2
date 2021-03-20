@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="num" oninput="songuyen(this.value)" onchange="songuyen(this.value)">
+<p>Dãy số nguyên tố: <span id="num1"></span></p>
+<script>
+    function songuyen(so) {
+        var l = [];
+         for (let i = 0; i <= so; i++){
+             let k = 1;
+             if (i <= 0){
+                document.getElementById("num1").innerHTML = "khong phai so nguyen to"
+             } else if (i == 1){
+                 document.getElementById("num1").innerHTML = "khong phai so nguyen to"
+             } else if (i == 2){
+                document.getElementById("num1").innerHTML = i
+             } else {
+                for (let j = 2; j < i; j++){
+                    if (i % j == 0){
+                        k = 0
+                        break;
+                    }
+                } if (k == 1){
+                     l.push(i)
+                } document.getElementById("num1").innerHTML = "2" + "," + l
+             }
+         }
+    }
+
+
+
+
+</script>
+</body>
+</html>
