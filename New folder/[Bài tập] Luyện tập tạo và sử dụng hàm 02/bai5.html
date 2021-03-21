@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    check()
+    function check() {
+        a = parseInt(prompt("Nhập số lượng cần kiểm tra"))
+        if (a < 0) {
+            alert("Số lượng không đủ")
+        } else if (a == 0 || a == 1) {
+            alert("Số bé nhất là " + a)
+        } else if (a > 1) {
+            var b = [];
+            for (let i = 0; i < a; i++) {
+                b[i] = prompt("Nhập số cần kiểm tra")
+            }
+            var min = b[0];
+            for (let j = 0; j < b.length; j++){
+                if (min > b[j]){
+                    min = b[j]
+                }
+            } alert("số bé nhất là " + min)
+        }
+    }
+</script>
+</body>
+</html>

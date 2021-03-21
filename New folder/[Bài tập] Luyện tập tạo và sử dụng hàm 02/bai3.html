@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" oninput="factorial(this.value)" placeholder="Nhập giai thừa"><br>
+<p>Result = <span id="span1"></span></p>
+<script>
+
+    function factorial(a) {
+        if (a == 1) {
+            document.getElementById("span1").innerHTML = a
+        } else if (a == 2) {
+            document.getElementById("span1").innerHTML = a
+        } else {
+            var g = 1
+            for (let i = 1; i <= a; i++) {
+                g = g * i
+            }
+            document.getElementById("span1").innerHTML = g
+        }
+    }
+</script>
+</body>
+</html>

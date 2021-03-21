@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    addandcheck()
+    function addandcheck() {
+        var a = prompt("Enter the length u want?");
+        if (a <= 0 || a == 1 ){
+            alert("The length is not enough")
+        } else {
+            var b =[];
+            for (var i = 0; i < a; i++ ){
+                b [i] = prompt("Enter the number")
+            }
+            var first = 0;
+            var last = b.length - 1;
+            while (first < last){
+                var c = b[first];
+                b[first] = b[last];
+                b[last] = c;
+                first++;
+                last--;
+            } alert("[" + b + "]")
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    check()
+    function check() {
+        var a = prompt("Enter the length number");
+        if (a <= 0) {
+            alert("The length is not enough");
+        } else if (a >= 1) {
+            var b = [];
+            for (var i = 0; i < a; i++) {
+                b[i] = prompt("Enter the number")
+            } alert("Array b: " + "[" + b + "]" + " has " + b.length + " elements")
+        }
+        var c = prompt("Enter the number u want to find")
+        var count = 0;
+        var k = 1;
+        for (var j = 0; j < b.length; j++){
+            if (c == b[j]){
+                k = 1;
+                count++
+            } else {
+                k = 0;
+            }
+        }
+        if (k = 1){
+            alert("Found the " + c + " " + count + " time")
+        } else {
+            alert(c + " not found")
+        }
+    }
+</script>
+</body>
+</html>

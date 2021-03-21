@@ -5,38 +5,23 @@
     <title>Title</title>
 </head>
 <body>
-<input type="text" id="text1" placeholder="Tính độ dài chuỗi">
-<button type="button" onclick="length()">Click</button>
+<input type="text" id="text1" placeholder="Tính chuvi">
+<button type="button" onclick="chuvi()">Click</button>
 
-<input type="text" id="text2" placeholder="Tính trung bình cộng">
-<button type="button" onclick="average()">Click</button>
+<input type="text" id="text2" placeholder="Tính dientich">
+<button type="button" onclick="dientich()">Click</button>
 
 <P>Result: <span id="result"></span></P>
 <script>
 
-    function length(a) {
+    function chuvi(a) {
         a = document.getElementById("text1").value
-        document.getElementById("result").innerHTML = a.length
+        document.getElementById("result").innerHTML = a*2*3.14
     }
 
-
-    function average(tbc){
-        tbc = document.getElementById("text2").value;
-        var b = tbc.split('');
-        alert(b)
-        var sum = b.reduce(function (total, number) {
-            return total + number;
-        }, 0);
-        alert(sum)
-        // total = [];
-        // count = 0;
-        // for (var i = 0; i < b.length; i++){
-        //     total.push(b[i])
-        //     sum = total.join()
-        //     alert(sum)
-        //     count++;
-        // }
-        document.getElementById(result).innerHTML = total/count
+    function dientich(a) {
+        a = document.getElementById("text1").value
+        document.getElementById("result").innerHTML = a*a*3.14
     }
 </script>
 </body>

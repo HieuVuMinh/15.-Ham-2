@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    check()
+    function check (){
+         var a = prompt("Nhập số cần check")
+        var b = parseInt(a);
+        var k = 1;
+        if (b == Number.NaN){
+            k = 1;
+        } else if (b < 0) {
+            alert(b + " Nhỏ hơn 0")
+        } else if (b > 0){
+            k = 0;
+        }
+        if (k == 1){
+            alert("không phải số nguyên dương")
+        } else {
+            alert("là số nguyên dương")
+        }
+    }
+</script>
+</body>
+</html>
